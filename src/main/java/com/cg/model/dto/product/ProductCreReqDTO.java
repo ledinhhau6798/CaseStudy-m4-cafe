@@ -18,14 +18,14 @@ import java.math.BigDecimal;
 public class ProductCreReqDTO {
     private String title;
     private BigDecimal price;
-    private Category category;
+    private CategoryCreReqDTO category;
 
     public Product toProduct() {
         return new Product()
                 .setId(null)
                 .setTitle(title)
                 .setPrice(price)
-                .setCategory(category)
+                .setCategory(category.toCategory())
                 ;
     }
 }

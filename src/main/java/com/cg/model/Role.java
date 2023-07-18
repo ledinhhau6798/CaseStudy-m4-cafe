@@ -1,6 +1,7 @@
 package com.cg.model;
 
-import com.cg.model.dto.user.enums.ERole;
+//import com.cg.model.dto.user.enums.ERole;
+import com.cg.model.enums.ERole;
 import lombok.*;
 import javax.persistence.*;
 import java.util.List;

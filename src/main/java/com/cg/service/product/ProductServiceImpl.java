@@ -58,13 +58,13 @@ public class ProductServiceImpl implements IProductService{
 
     @Override
     public ProductCreResDTO create(ProductCreReqDTO productCreReqDTO) {
-//        CategoryCreReqDTO categoryCreReqDTO = productCreReqDTO.getCategory();
-//        Category category =categoryCreReqDTO.toCategory();
-//
-//        categoryRepository.save(category);
+        CategoryCreReqDTO categoryCreReqDTO = productCreReqDTO.getCategory();
+        Category category =categoryCreReqDTO.toCategory();
+
+        categoryRepository.save(category);
         Product product = productCreReqDTO.toProduct();
 
-//        product.setCategory(category);
+        product.setCategory(category);
         productRepository.save(product);
 
         ProductCreResDTO productCreResDTO = product.toProductCreResDTO();
